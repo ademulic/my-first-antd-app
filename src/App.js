@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+ 
+import { Flex, Typography, Menu} from 'antd';
+import './App.css';  
 
 function App() {
+
+  const {Text} = Typography;
+  const textColorWhite = {color:'white'} ;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Flex justify='center' gap={65} style={{padding:20, backgroundColor:'#826300',color:'white'}}>
+          <Text  style={textColorWhite}>MEGA SALE</Text> 
+          <Text style={textColorWhite}>Take 10% OFF</Text>
+      </Flex>
+      <Menu className='Menu'  mode='horizontal' 
+        items={[
+          {label:'PRODUCTS', key:"products"},
+          {label:'SHOP', key:"shop"},
+          {label:'WEDDINGS', key:"weddings"},
+          {label:'SERVICES', key:"services"},
+          {label:'CONTACT', key:"contact"},
+          ]}
+      />
+ 
     </div>
   );
 }
